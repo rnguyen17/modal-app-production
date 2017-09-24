@@ -115,7 +115,7 @@ class Form extends React.Component {
 			{name, email, phone, address, city, state, zip} = this.state.formInputs;
 
 		return (
-			<form className="form" onChange={this.onFormChangeHandler}>
+			<form className="form" autoComplete="off" onChange={this.onFormChangeHandler}>
 				<div className="form-input-container">
 					<FormInput name="name" type="textfield" placeholder="Name" value={name} isShowError={isShowError} required/>
 					<FormInput name="email" type="email" placeholder="Email" value={email}/>
