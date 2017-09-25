@@ -103,7 +103,9 @@ class Form extends React.Component {
 				isValid: isValid
 			}, () => {
 				if (this.state.isValid) {
-					console.log(this.state.formInputs);
+					let finalFormDataOutput = Object.assign({}, this.state.formInputs, {variation: this.props.variation});
+
+					console.log(finalFormDataOutput);
 					this.props.onFormSubmitHandler();
 				}
 			})
